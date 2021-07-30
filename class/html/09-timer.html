@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script>
+       
+       let Auth = String (Math.floor(Math.random() *1000000)).padStart(6,"0")      
+       console.log(Auth)
+
+       function aaa (){
+        document.getElementById("number").innerText = String(Math.floor(Math.random()*1000000)).padStart(6,"0")
+        
+        let timer =180;
+        setInterval(function(){
+            if(timer>0){
+                let min = Math.floor(timer/60)
+                let sec = String(timer%60).padStart(2,"0")
+                timer = timer -1
+            document.getElementById("min").innerText=min
+            document.getElementById("sec").innerText=sec
+            }
+        },1000)   
+    
+    }
+
+        
+        
+
+    
+
+    </script>
+</head>
+<body>
+    <div id="number">000000</div>
+    <button onclick="aaa()">인증번호 전송 </button>
+    <!-- <spa id="ccc">10</spa> -->
+    <button onclick="ddd()">인증완료</button>
+    <span id = "min">3</span>
+    <span>:</span>
+    <span id="sec">00</span>
+</body>
+</html>
